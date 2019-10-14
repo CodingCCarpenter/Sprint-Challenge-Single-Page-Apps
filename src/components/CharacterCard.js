@@ -1,7 +1,7 @@
 import React from "react";
 
+import CharacterList from '.CharacterList.js';
 
-
-export default function CharacterCard() {
-  return <span>todo: character</span>;
+const CharacterCard = props => {
+  return;
 }

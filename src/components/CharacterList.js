@@ -19,8 +19,8 @@ export default function CharacterList() {
           setPeople(res.data);
           console.log(res.data.results)
         })
-        .catch(error => {
-          console.error('Server Error', error);
+        .catch(err => {
+          console.log('Server Error', err);
         });
     }
     
@@ -29,17 +29,17 @@ export default function CharacterList() {
 
   return (
     <div className="character-list">
-      {people.map(person => (
+      {/* {people.map(person => (
         <PersonDetails />
-      ))}
+      ))} */}
     </div>
   );
 }
 
-function PersonDetails = ({ person }) {
-  return (
-    <div>
-      This
-    </div>
-  )
-}
+// function PersonDetails = ({ person }) {
+//   return (
+//     <div>
+//       This
+//     </div>
+//   )
+// }
