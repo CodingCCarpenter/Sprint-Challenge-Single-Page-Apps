@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-
-
-
 import axios from 'axios';
+import { Route } from 'react-router-dom';
 
-export default function CharacterList() {
+import CharacterCard from './CharacterCard.js';
+
+
+export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
 
   const [ people, setPeople] = useState();
@@ -29,9 +30,8 @@ export default function CharacterList() {
 
   return (
     <div className="character-list">
-      {/* {people.map(person => (
-        <PersonDetails />
-      ))} */}
+      {people.map((person) => P
+        <Link to )}
     </div>
   );
 }
