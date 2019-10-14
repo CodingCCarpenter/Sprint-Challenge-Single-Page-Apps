@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../index.css'
+
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
