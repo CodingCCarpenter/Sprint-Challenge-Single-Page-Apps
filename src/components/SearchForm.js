@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import '../index.CSS'
+
 
 export default function SearchForm() {
  

@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../index.CSS'
+
 
 export default function Header() {
   return (
