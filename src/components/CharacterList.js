@@ -1,45 +1,22 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
-import { Route } from 'react-router-dom';
+import axios from "axios";
+import styled from "styled-components";
+import CharacterCard from "./CharacterCard.js";
 
-import CharacterCard from './CharacterCard.js';
-
-
-export default function CharacterList(props) {
-  // TODO: Add useState to track data from useEffect
-
-  const [ people, setPeople] = useState();
-
-  useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    const getPeople = () => {
-      axios
-        .get('https://rickandmortyapi.com/api/character/')
-        then(res => {
-          setPeople(res.data);
-          console.log(res.data.results)
-        })
-        .catch(err => {
-          console.log('Server Error', err);
-        });
-    }
-    
-    getPeople();
-  }, []);
+export default function CharacterList({ characters }) {
+  const Section = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+  `;
 
   return (
-    <div className="character-list">
-      {people.map((person) => P
-        <Link to )}
-    </div>
+    <Section className="character-list">
+      {characters.map((index) => (
+        <CharacterCard character={index} />
+      ))}
+    </Section>
   );
 }
-
-// function PersonDetails = ({ person }) {
-//   return (
-//     <div>
-//       This
-//     </div>
-//   )
-// }

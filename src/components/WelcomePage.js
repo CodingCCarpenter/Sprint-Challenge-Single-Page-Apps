@@ -1,17 +1,45 @@
 import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+import '../index.css';
 
 
+const Img = styled.img`
+  width: 60vw;
+`;
+
+const Span = styled.span`
+  background-color: white;
+  padding: 10px;
+`;
 
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
-      <header>
+      <header class = 'header'>
         <h1>Welcome to the ultimate fan site!</h1>
-        <img
+        <Img
           className="main-img"
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-          alt="rick"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
+          alt="Rick and Morty Logo"
         />
+        <br />
+        <Link to="/characters">
+          <Span>Click Here for a List of Characters</Span>
+        </Link>
+        <br />
+        <br />
+        <br />
+        <Link to="/locations">
+          <Span>Click Here for a List of Locations</Span>
+        </Link>
+        <br />
+        <br />
+        <br />
+        <Link to="/episodes">
+          <Span>Click Here for a List of Episodes</Span>
+        </Link>
       </header>
     </section>
   );

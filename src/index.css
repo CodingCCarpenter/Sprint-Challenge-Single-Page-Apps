@@ -37,3 +37,12 @@ main {
 header h1 {
   text-align: center;
 }
+
+.header {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+  height: 500px;
+  
+}
