@@ -2,11 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import '../index.css';
-
+const Header = styled.header`
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+  height: 500px;
+`;
 
 const Img = styled.img`
-  width: 60vw;
+  width: 100%;
 `;
 
 const Span = styled.span`
@@ -17,13 +22,14 @@ const Span = styled.span`
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
-      <header class = 'header'>
-        <h1>Welcome to the ultimate fan site!</h1>
+      <Header>
         <Img
           className="main-img"
-          src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
-          alt="Rick and Morty Logo"
+          src="https://wallpaperscute.com/wp-content/uploads/2018/04/Desktop-Wallpaper-Rick-and-Morty-Art.jpg"
+          alt="Rick and Morty Get Swifty"
         />
+        <br />
+        <br />
         <br />
         <Link to="/characters">
           <Span>Click Here for a List of Characters</Span>
@@ -40,7 +46,7 @@ export default function WelcomePage() {
         <Link to="/episodes">
           <Span>Click Here for a List of Episodes</Span>
         </Link>
-      </header>
+      </Header>
     </section>
   );
 }
